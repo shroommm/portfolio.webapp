@@ -7,7 +7,7 @@ import FramerWrapper from "@/components/FramerWrapper";
 
 export const siteConfig = {
   name: "Anh Quan Nguyen",
-  description: "My full name is Nguyen Khac Anh Quan",
+  description: "My full name is Nguyen Khac Anh Quan (It's Vietnamese)",
   ogImage: "",
   url: "",
 };

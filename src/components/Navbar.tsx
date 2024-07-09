@@ -25,7 +25,7 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const items = [
     { name: "Home", icon: <Home /> , link: "/"},
-    { name: "About", icon: <User2 />,link: "" },
+    { name: "About", icon: <User2 />,link: "/about" },
     { name: "Skills", icon: <Lightbulb />, link: "" },
     { name: "Projects", icon: <Layers />, link: "" },
     { name: "Work", icon: <Briefcase />, link: "" },

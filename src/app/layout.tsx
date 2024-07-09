@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import { siteConfig } from "./page";
 import { seoKeywords } from "./const";
+import { env } from "process";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: "400",
@@ -17,7 +18,7 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://khacnguyenquan.vercel.app/"),
+  metadataBase: new URL(env.NEXT_BASE_URL || "http://localhost:3000"),
   title: {
     default: siteConfig.name,
     template: `%s - Software Engineer`,
