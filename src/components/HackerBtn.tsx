@@ -1,9 +1,15 @@
-"use client"
-import { useState, useEffect } from 'react';
-import { Button } from './ui/button';
-import { Download } from 'lucide-react';
+"use client";
+import { useState, useEffect } from "react";
+import { Button } from "./ui/button";
+import { Download } from "lucide-react";
 
-const HackerBtn = ({ label }: { label: string }) => {
+const HackerBtn = ({
+  label,
+  disabled = false,
+}: {
+  label: string;
+  disabled?: boolean;
+}) => {
   const [displayText, setDisplayText] = useState(label);
   const charset = "abcdefghijklmnopqrstuvwxyz";
 
@@ -33,9 +39,15 @@ const HackerBtn = ({ label }: { label: string }) => {
   }, [label]);
 
   return (
-    <Button disabled size={'lg'} className='text-base px-5 py-6' onMouseEnter={startScrambling}
-    >   <Download className="mx-1" />
-        {displayText}
+    <Button
+      size={"lg"}
+      className="text-base px-5 py-6"
+      disabled={disabled}
+      onMouseEnter={startScrambling}
+    >
+      {" "}
+      <Download className="mx-1" />
+      {displayText}
     </Button>
   );
 };
