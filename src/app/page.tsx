@@ -1,5 +1,3 @@
-
-
 import SocialLinks from "@/components/SocialLinks";
 import HeroTexts from "@/components/HeroTexts";
 import HeroImage from "@/components/HeroImage";
@@ -12,27 +10,34 @@ export const siteConfig = {
   description: "My full name is Nguyen Khac Anh Quan",
   ogImage: "",
   url: "",
-}
+};
 export default function Home() {
   return (
-   <>
+    <>
       {/* LEFT SIDE  */}
-      <FramerWrapper className=" h-full w-auto flex flex-col justify-start gap-4" y={0} x={-100}>
+      <FramerWrapper
+        className="h-full w-auto flex flex-col justify-start gap-4"
+        y={0}
+        x={-100}
+      >
         <HeroTexts />
         <div className="h-fit w-full p-4 flex gap-3">
           <SocialLinks />
         </div>
-       <DownLoadResumeBtn/>
+        <DownLoadResumeBtn />
       </FramerWrapper>
       {/* RIGHT SIDE image  */}
-      <FramerWrapper className="h-full w-[47%] relative block max-lg:hidden" y={0} x={100}>
-       
-      {/* IMAGE  */}
+      <FramerWrapper
+        className="h-full w-fit relative block max-lg:hidden text-center"
+        y={0}
+        x={100}
+      >
+        {/* IMAGE  */}
         <HeroImage />
       </FramerWrapper>
-     
+
       {/* GITHUB BUTTON  */}
-      <GithubBtn/>
-      </>
+      <GithubBtn />
+    </>
   );
 }

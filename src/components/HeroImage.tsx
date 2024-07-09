@@ -10,8 +10,8 @@ const HeroImage = () => {
         loading="eager"
         priority
         height={500}
-        width={500}
-        className="w-[500px] h-[500px] object-contain object-top"
+        width={550}
+        className="w-[550px] h-[500px] object-contain object-top"
         quality={100}
       />
     </>
